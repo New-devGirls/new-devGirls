@@ -63,17 +63,6 @@ $ mvn spring-boot:run
 
 <br>
   
-## 🎨 Layout
-  
-Apesar de não ser um dos requisitos obrigatórios do projeto, o front-end foi elaborado para que seja possível testar as funcionalidades da aplicação através de uma interface. A imagem abaixo mostra a tela principal da Wishlist:
-
-<img src="https://images2.imgbox.com/19/54/nMFZ7oBh_o.jpeg" height="300" width="420" alt="Página de Login" />
-
-<img src="https://images2.imgbox.com/e2/13/gbGGrJmk_o.jpeg" height="300" width="420" alt="Página da Aplicação" />
-
-
-<br>
-<br>
  
 ## Feito com ❤️ por  
   
