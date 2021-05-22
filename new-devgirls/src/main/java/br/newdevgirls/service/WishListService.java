@@ -4,7 +4,9 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
 
 import br.newdevgirls.model.Client;
 import br.newdevgirls.model.Product;
@@ -23,12 +25,7 @@ public class WishListService {
     public Client addProductToWishList(long clientId, long productId) {
     List<Product> productList = this.getProductsByClientId(clientId);
     if (productList.size() >= 20) {
-        throw new ResponseStatusException(BAD_GATEWAY, "Limite de produtos 20 foi atingido!");
-    }
-
-    List<Product> product = this.getProductIfExistInAWishlist(clientId, productId);
-    if (product.isPresent()) {
-        throw new ResponseStatusException(CONFLICT, "O item já está na lista do cliente!");
+        throw new ResponseStatusException(HttpStatus.BAD_GATEWAY, "Limite de produtos 20 foi atingido!");
     }
 
     Optional<Client> client = clientRepository.findById(clientId);
