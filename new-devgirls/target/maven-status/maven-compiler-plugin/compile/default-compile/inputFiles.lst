@@ -1,0 +1,17 @@
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\repository\ProductRepository.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\controller\ProductController.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\dto\ClientRequestDto.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\Application.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\service\WishListService.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\exception\ClientDontExistException.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\dto\ClientResponseDto.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\controller\ClientController.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\model\Product.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\exception\NameToProductDontExistException.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\service\ProductService.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\config\SwaggerConfig.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\controller\WishListController.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\model\Client.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\repository\WishListRepository.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\service\ClientService.java
+D:\Desktop\projeto\new-devGirls\new-devgirls\src\main\java\br\newdevgirls\repository\ClientRepository.java

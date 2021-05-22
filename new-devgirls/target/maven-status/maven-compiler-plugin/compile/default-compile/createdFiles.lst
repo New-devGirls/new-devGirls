@@ -1,0 +1,17 @@
+br\newdevgirls\service\ClientService.class
+br\newdevgirls\dto\ClientRequestDto.class
+br\newdevgirls\model\Client.class
+br\newdevgirls\repository\ProductRepository.class
+br\newdevgirls\controller\ProductController.class
+br\newdevgirls\service\WishListService.class
+br\newdevgirls\controller\WishListController.class
+br\newdevgirls\repository\WishListRepository.class
+br\newdevgirls\dto\ClientResponseDto.class
+br\newdevgirls\model\Product.class
+br\newdevgirls\Application.class
+br\newdevgirls\config\SwaggerConfig.class
+br\newdevgirls\exception\NameToProductDontExistException.class
+br\newdevgirls\controller\ClientController.class
+br\newdevgirls\exception\ClientDontExistException.class
+br\newdevgirls\repository\ClientRepository.class
+br\newdevgirls\service\ProductService.class
