@@ -18,28 +18,34 @@ public class WishListService {
 
 	  @Autowired
 	  private ClientRepository clientRepository;
+	
 
+    public Client addProductToWishList(long clientId, long productId) {
+    List<Product> productList = this.getProductsByClientId(clientId);
+    if (productList.size() >= 20) {
+        throw new ResponseStatusException(BAD_GATEWAY, "Limite de produtos 20 foi atingido!");
+    }
 
-	  public Client addProductToWishList(long clientId, long productId) {
-		  List<Product> productList = this.getProductsByClientId(clientId);
-		  if (productList.size() <= 20) {
+    List<Product> product = this.getProductIfExistInAWishlist(clientId, productId);
+    if (product.isPresent()) {
+        throw new ResponseStatusException(CONFLICT, "O item já está na lista do cliente!");
+    }
 
-			Optional<Client> client = clientRepository.findById(clientId);
-			if (client.isPresent()) {
-				Optional<Product> product = (productRepository.findById(productId));
-				if (product.isPresent()) {
+    Optional<Client> client = clientRepository.findById(clientId);
+    if (client.isPresent()) {
+        Optional<Product> product = (productRepository.findById(productId));
+        if (product.isPresent()) {
 
-					Product product1 = product.get();
-					Client client1 = client.get();
-					client1.addProduct(product1);
-					return clientRepository.save(client1);
-				}
-			}
-		  } else {
-		  	return null;
-		  }
-	    return null;
-	  }
+            Product product1 = product.get();
+            Client client1 = client.get();
+            client1.addProduct(product1);
+            return clientRepository.save(client1);
+        }
+    } else {
+        return null;
+    }
+    return null;
+}
 
 	  public List<Product> getProductsByClientId(long clientId) {
 	    Optional<Client> client = clientRepository.findById(clientId);
