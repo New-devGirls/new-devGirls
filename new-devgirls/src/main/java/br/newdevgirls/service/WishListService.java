@@ -21,8 +21,8 @@ public class WishListService {
 
 
 	  public Client addProductToWishList(long clientId, long productId) {
-		  List<Product> test = this.getProductsByClientId(clientId);
-		  if (test.size() <= 20) {
+		  List<Product> productList = this.getProductsByClientId(clientId);
+		  if (productList.size() <= 20) {
 
 			Optional<Client> client = clientRepository.findById(clientId);
 			if (client.isPresent()) {
