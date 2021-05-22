@@ -21,18 +21,23 @@ public class WishListService {
 
 
 	  public Client addProductToWishList(long clientId, long productId) {
+		  List<Product> test = this.getProductsByClientId(clientId);
+		  if (test.size() <= 20) {
 
-	    Optional<Client> client = clientRepository.findById(clientId);
-	    if (client.isPresent()) {
-	      Optional<Product> product = (productRepository.findById(productId));
-	      if (product.isPresent()) {
+			Optional<Client> client = clientRepository.findById(clientId);
+			if (client.isPresent()) {
+				Optional<Product> product = (productRepository.findById(productId));
+				if (product.isPresent()) {
 
-	        Product product1 = product.get();
-	        Client client1 = client.get();
-	        client1.addProduct(product1);
-	        return clientRepository.save(client1);
-	      }
-	    }
+					Product product1 = product.get();
+					Client client1 = client.get();
+					client1.addProduct(product1);
+					return clientRepository.save(client1);
+				}
+			}
+		  } else {
+		  	return null;
+		  }
 	    return null;
 	  }
 
